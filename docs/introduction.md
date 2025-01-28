@@ -4,9 +4,6 @@ sidebar_position: 1
 
 # Introduction
 
-.npmrc here:
-//registry=registry.wfloat.com/repository/wfloat:_auth=<USER_AUTH_HERE>
-@wfloat:registry=https://registry.wfloat.com/repository/react-native-wfloat
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
