@@ -78,7 +78,7 @@ const config: Config = {
       title: 'Wfloat Documentation',
       logo: {
         href: '/introduction',
-        alt: 'My Site Logo',
+        alt: '',
         src: 'img/logo.svg',
       },
       items: [
