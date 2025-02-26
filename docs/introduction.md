@@ -5,44 +5,112 @@ sidebar_position: 1
 # Introduction
 
 
-Let's discover **Docusaurus in less than 5 minutes**.
+How to install **Wfloat React Native for iOS** into your app.
 
-## Getting Started
+## 1. Install the Package
 
-Get started by **creating a new site**.
+### **If using Yarn**
+First, create (or update) a `.npmrc` file in the root of your project with the following content:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```
+@wfloat:registry=https://registry.wfloat.com/repository/react-native-wfloat
+always-auth=true
+_auth=<YOUR_AUTH_CREDENTIALS_HERE>
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Then install the package:
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+```sh
+yarn add @wfloat/react-native-wfloat
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+### **If using npm**
+First, create (or update) a `.npmrc` file in the root of your project:
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+```
+@wfloat:registry=https://registry.wfloat.com/repository/react-native-wfloat
+//registry.wfloat.com/repository/react-native-wfloat:_auth=<YOUR_AUTH_CREDENTIALS_HERE>
+always-auth=true
+```
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Then install the package:
+
+```sh
+npm install @wfloat/react-native-wfloat
+```
+
+---
+
+## 2. Setup iOS Dependencies
+
+After installing the package, navigate to the `ios/` directory and install CocoaPods dependencies:
+
+```sh
+cd ios
+bundle install
+bundle exec pod install
+cd ..
+```
+
+---
+
+## 3. Import and Use the Library
+
+Modify your **App.tsx** or any component where you want to use the package:
+
+```tsx
+import React from 'react';
+import { View, Button, StyleSheet } from 'react-native';
+import { speech, playWav, loadModel, unloadModel } from '@wfloat/react-native-wfloat';
+
+loadModel("default_male");
+
+const playSound = async () => {
+  try {
+    const text = "Hello from dubfloat.";
+    const newSound = await speech("default_male", text);
+    playWav(newSound);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <Button title="Play Sound" onPress={playSound} />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+export default App;
+```
+
+---
+
+## 4. Build and Run
+
+Run the project in iOS simulator:
+
+```sh
+npx react-native run-ios
+```
+
+or open `ios/App.xcworkspace` in Xcode and run the app.
+
+---
+
+### That's it! Your app is now using `@wfloat/react-native-wfloat` for computer generated voice.
+
+If you run into any issues, please [email mitch@wfloat.com](mailto:mitch@wfloat.com).
+
+
+
