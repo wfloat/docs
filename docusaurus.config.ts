@@ -145,7 +145,7 @@ const config: Config = {
         //   ],
         // },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} WFLOAT LLC. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} WFLOAT LLC.`,
     },
     prism: {
       theme: prismThemes.github,
