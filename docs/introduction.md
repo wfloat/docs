@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 
 # Introduction
+# NOTE: These are version 0 docs. Check back soon for version 1.
 
 
 How to install **Wfloat React Native for iOS** into your app.
