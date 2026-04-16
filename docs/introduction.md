@@ -6,7 +6,7 @@ sidebar_position: 1
 # NOTE: These are version 0 docs. Check back soon for version 1.
 
 
-How to install **Wfloat React Native for iOS** into your app.
+<!-- How to install **Wfloat React Native for iOS** into your app.
 
 ## 1. Install the Package
 
@@ -109,9 +109,9 @@ or open `ios/App.xcworkspace` in Xcode and run the app.
 
 ---
 
-### That's it! Your app is now using `@wfloat/react-native-wfloat` for computer generated voice.
+### That's it! Your app is now using `@wfloat/react-native-wfloat` for computer generated voice. -->
 
-If you run into any issues, please [email mitch@wfloat.com](mailto:mitch@wfloat.com).
+If you run into any issues, please [email mitch@wfloat.com](mailto:mitch@wfloat.com)!
 
 
 
