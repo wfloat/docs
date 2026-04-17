@@ -1,117 +1,91 @@
 ---
+title: Introduction
 sidebar_position: 1
+slug: /
 ---
 
 # Introduction
-# NOTE: These are version 0 docs. Check back soon for version 1.
 
+Wfloat lets you ship text-to-speech that runs inference inside your app rather than sending text to a hosted inference endpoint.
 
-<!-- How to install **Wfloat React Native for iOS** into your app.
+Wfloat currently ships two packages:
 
-## 1. Install the Package
+- `wfloat-web` for browser applications
+- `@wfloat/react-native-wfloat` for React Native applications on iOS and Android
 
-### **If using Yarn**
-First, create (or update) a `.npmrc` file in the root of your project with the following content:
+At a high level, both packages are built around the same product flow:
 
-```
-@wfloat:registry=https://registry.wfloat.com/repository/react-native-wfloat
-always-auth=true
-_auth=<YOUR_AUTH_CREDENTIALS_HERE>
-```
+1. You get a `modelId` from your Wfloat account.
+2. A device loads the model. The model is downloaded if the device does not already have it cached.
+3. Speech is generated locally in the app.
 
-Then install the package:
+## Your `modelId`
 
-```sh
-yarn add @wfloat/react-native-wfloat
-```
+`modelId` means your Wfloat model credential.
 
-### **If using npm**
-First, create (or update) a `.npmrc` file in the root of your project:
+You can find it in your account page after purchase. The UI labels it as **Model Credential**.
 
-```
-@wfloat:registry=https://registry.wfloat.com/repository/react-native-wfloat
-//registry.wfloat.com/repository/react-native-wfloat:_auth=<YOUR_AUTH_CREDENTIALS_HERE>
-always-auth=true
-```
+## What happens on first load
 
-Then install the package:
+The first time a device loads a model, the package downloads the model assets it needs onto the device. The model stays cached on the device, so when that user comes back later the package can use the local model again instead of downloading it each time. Speech runs locally in the app rather than sending text to a hosted inference endpoint.
 
-```sh
-npm install @wfloat/react-native-wfloat
-```
+## Packages
 
----
+The Web package and React Native package are intentionally close to each other at a product level so teams can work with the same model, voices, and overall integration pattern across platforms.
 
-## 2. Setup iOS Dependencies
+If you are ready to integrate, continue to the package-specific quick starts:
 
-After installing the package, navigate to the `ios/` directory and install CocoaPods dependencies:
+- [Web Quick Start](./quickstart-web-sdk)
+- [React Native Quick Start](./quickstart-react-native-sdk)
 
-```sh
-cd ios
-bundle install
-bundle exec pod install
-cd ..
-```
+## Voice IDs
 
----
+The current model exposes these voice IDs:
 
-## 3. Import and Use the Library
+- `skilled_hero_man`
+- `skilled_hero_woman`
+- `fun_hero_man`
+- `fun_hero_woman`
+- `strong_hero_man`
+- `strong_hero_woman`
+- `mad_scientist_man`
+- `mad_scientist_woman`
+- `clever_villain_man`
+- `clever_villain_woman`
+- `narrator_man`
+- `narrator_woman`
+- `wise_elder_man`
+- `wise_elder_woman`
+- `outgoing_anime_man`
+- `outgoing_anime_woman`
+- `scary_villain_man`
+- `scary_villain_woman`
+- `news_reporter_man`
+- `news_reporter_woman`
 
-Modify your **App.tsx** or any component where you want to use the package:
+## Emotions
 
-```tsx
-import React from 'react';
-import { View, Button, StyleSheet } from 'react-native';
-import { speech, playWav, loadModel, unloadModel } from '@wfloat/react-native-wfloat';
+The current model supports these emotions:
 
-loadModel("default_male");
+- `neutral`
+- `joy`
+- `sadness`
+- `anger`
+- `fear`
+- `surprise`
+- `dismissive`
+- `confusion`
 
-const playSound = async () => {
-  try {
-    const text = "Hello from dubfloat.";
-    const newSound = await speech("default_male", text);
-    playWav(newSound);
-  } catch (error) {
-    console.error(error);
-  }
-};
+## Intensity
 
-const App = () => {
-  return (
-    <View style={styles.container}>
-      <Button title="Play Sound" onPress={playSound} />
-    </View>
-  );
-};
+Intensity controls how strongly the selected emotion is expressed. It is a value between `0` and `1`.
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+## Speed
 
-export default App;
-```
+Speed controls the speaking rate. `1.0` is the default speed, `0.75` is slower, and `1.25` is faster.
 
----
+## Pricing
 
-## 4. Build and Run
+Wfloat pricing tiers are tied to your app's monthly active users.
 
-Run the project in iOS simulator:
-
-```sh
-npx react-native run-ios
-```
-
-or open `ios/App.xcworkspace` in Xcode and run the app.
-
----
-
-### That's it! Your app is now using `@wfloat/react-native-wfloat` for computer generated voice. -->
-
-If you run into any issues, please [email mitch@wfloat.com](mailto:mitch@wfloat.com)!
-
-
-
+For this product, an MAU is counted as someone who has used a model in the last 30 days.

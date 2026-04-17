@@ -77,18 +77,27 @@ const config: Config = {
     navbar: {
       title: 'Wfloat Documentation',
       logo: {
-        href: '/introduction',
+        href: '/',
         alt: '',
         src: 'img/logo.svg',
       },
       items: [
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'tutorialSidebar',
-        //   position: 'left',
-        //   label: 'Tutorial',
-        // },
-        // {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          to: '/',
+          label: 'Introduction',
+          activeBaseRegex: '^/$',
+          position: 'left',
+        },
+        {
+          to: '/quickstart-web-sdk',
+          label: 'Web',
+          position: 'left',
+        },
+        {
+          to: '/quickstart-react-native-sdk',
+          label: 'React Native',
+          position: 'left',
+        },
         {
           href: 'https://wfloat.com',
           label: 'Go to homepage',
@@ -110,7 +119,15 @@ const config: Config = {
           items: [
             {
               label: 'Introduction',
-              to: '/introduction',
+              to: '/',
+            },
+            {
+              label: 'Web Quick Start',
+              to: '/quickstart-web-sdk',
+            },
+            {
+              label: 'React Native Quick Start',
+              to: '/quickstart-react-native-sdk',
             },
           ],
         },
