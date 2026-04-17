@@ -63,7 +63,7 @@ await SpeechClient.loadModel(modelId, {
 });
 ```
 
-On first load, the SDK downloads the model and native support assets for the current platform.
+On first load, the package downloads the model and native support assets for the current platform.
 
 ## 5. Generate speech
 

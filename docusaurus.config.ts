@@ -89,12 +89,12 @@ const config: Config = {
           position: 'left',
         },
         {
-          to: '/quickstart-web-sdk',
+          to: '/quickstart-web',
           label: 'Web',
           position: 'left',
         },
         {
-          to: '/quickstart-react-native-sdk',
+          to: '/quickstart-react-native',
           label: 'React Native',
           position: 'left',
         },
@@ -123,11 +123,11 @@ const config: Config = {
             },
             {
               label: 'Web Quick Start',
-              to: '/quickstart-web-sdk',
+              to: '/quickstart-web',
             },
             {
               label: 'React Native Quick Start',
-              to: '/quickstart-react-native-sdk',
+              to: '/quickstart-react-native',
             },
           ],
         },

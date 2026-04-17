@@ -6,7 +6,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Quick Start',
-      items: ['quickstart-web-sdk', 'quickstart-react-native-sdk'],
+      items: ['quickstart-web', 'quickstart-react-native'],
     },
   ],
 };

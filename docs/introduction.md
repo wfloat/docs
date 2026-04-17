@@ -35,8 +35,8 @@ The Web package and React Native package are intentionally close to each other a
 
 If you are ready to integrate, continue to the package-specific quick starts:
 
-- [Web Quick Start](./quickstart-web-sdk)
-- [React Native Quick Start](./quickstart-react-native-sdk)
+- [Web Quick Start](./quickstart-web)
+- [React Native Quick Start](./quickstart-react-native)
 
 ## Voice IDs
 
