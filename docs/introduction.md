@@ -10,7 +10,7 @@ Wfloat lets you ship text-to-speech that runs inference inside your app rather t
 
 Wfloat currently ships two packages:
 
-- `wfloat-web` for browser applications
+- `@wfloat/wfloat-web` for browser applications
 - `@wfloat/react-native-wfloat` for React Native applications on iOS and Android
 
 At a high level, both packages are built around the same product flow:
@@ -88,4 +88,4 @@ Speed controls the speaking rate. `1.0` is the default speed, `0.75` is slower, 
 
 Wfloat pricing tiers are tied to your app's monthly active users.
 
-For this product, an MAU is counted as someone who has used a model in the last 30 days.
+For this product, an MAU is counted as someone who has used loaded the text-to-speech model onto their device in the last 30 days.

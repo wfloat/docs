@@ -5,18 +5,18 @@ sidebar_position: 2
 
 # Web Quick Start
 
-This guide shows the current browser integration flow for `wfloat-web`.
+This guide shows the current browser integration flow for `@wfloat/wfloat-web`.
 
 ## 1. Install
 
-`wfloat-web` is installed from npm:
+`@wfloat/wfloat-web` is installed from npm:
 
 ```bash
-npm install wfloat-web
+npm install @wfloat/wfloat-web
 ```
 
 ```bash
-yarn add wfloat-web
+yarn add @wfloat/wfloat-web
 ```
 
 ## 2. Get your model ID
@@ -32,7 +32,7 @@ const modelId = "your-model-credential";
 Call `SpeechClient.loadModel(...)` before generating speech.
 
 ```ts
-import { SpeechClient } from "wfloat-web";
+import { SpeechClient } from "@wfloat/wfloat-web";
 
 const modelId = "your-model-credential";
 
