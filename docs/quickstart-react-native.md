@@ -31,7 +31,7 @@ React Native autolinking handles the package integration on Android. There is no
 
 ## 3. Get your model ID
 
-Your `modelId` is the **Model Credential** shown in your Wfloat account page after purchase.
+Your `modelId` is the **Model Credential** shown in your Wfloat account page after sign up.
 
 ```ts
 const modelId = "your-model-credential";

@@ -23,7 +23,7 @@ At a high level, both packages are built around the same product flow:
 
 `modelId` means your Wfloat model credential.
 
-You can find it in your account page after purchase. The UI labels it as **Model Credential**.
+You can find it in your account page after sign up. The UI labels it as **Model Credential**.
 
 ## What happens on first load
 
