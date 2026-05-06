@@ -21,7 +21,7 @@ yarn add @wfloat/wfloat-web
 
 ## 2. Get your model ID
 
-Your `modelId` is the **Model Credential** shown in your Wfloat account page sign up.
+Your `modelId` is the **Model Credential** shown in your Wfloat account page after [signing up](https://wfloat.com/users/register).
 
 ```ts
 const modelId = "your-model-credential";
