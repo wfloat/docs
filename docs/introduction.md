@@ -8,16 +8,19 @@ slug: /
 
 Wfloat lets you ship text-to-speech that runs inference inside your app rather than sending text to a hosted inference endpoint.
 
-Wfloat currently ships two packages:
+Wfloat currently ships three packages:
 
-- `@wfloat/wfloat-web` for browser applications
-- `@wfloat/react-native-wfloat` for React Native applications on iOS and Android
+- [`@wfloat/wfloat-web`](https://github.com/wfloat/wfloat-web) for browser applications
+- [`@wfloat/react-native-wfloat`](https://github.com/wfloat/react-native-wfloat) for React Native applications on iOS and Android
+- [`wfloat`](https://github.com/wfloat/wfloat-python) for local Python applications and scripts
 
-At a high level, both packages are built around the same product flow:
+At a high level, the Web and React Native packages are built around the same product flow:
 
 1. You get a `modelId` from your Wfloat account.
 2. A device loads the model. The model is downloaded if the device does not already have it cached.
 3. Speech is generated locally in the app.
+
+The Python package also runs speech locally, but it does not require a Wfloat model credential. Instead, it loads the public `wfloat/wfloat-tts` model directly.
 
 ## Your `modelId`
 
@@ -31,12 +34,13 @@ The first time a device loads a model, the package downloads the model assets it
 
 ## Packages
 
-The Web package and React Native package are intentionally close to each other at a product level so teams can work with the same model, voices, and overall integration pattern across platforms.
+The Web package and React Native package are intentionally close to each other at a product level so teams can work with the same model, voices, and overall integration pattern across platforms. The Python package uses the same voice and emotion set with a Python-native API and CLI.
 
 If you are ready to integrate, continue to the package-specific quick starts:
 
 - [Web Quick Start](./quickstart-web)
 - [React Native Quick Start](./quickstart-react-native)
+- [Python Quick Start](./quickstart-python)
 
 ## Voice IDs
 
