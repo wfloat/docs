@@ -141,6 +141,11 @@ const config: Config = {
           position: 'left',
         },
         {
+          to: '/quickstart-python',
+          label: 'Python',
+          position: 'left',
+        },
+        {
           href: 'https://wfloat.com',
           label: 'Go to homepage',
           target: '_self',
