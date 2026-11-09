@@ -1,6 +1,7 @@
 # Website
 
-Documentation source has moved to [wfloat/wfloat/docs](https://github.com/wfloat/wfloat/tree/main/docs). Read the docs at [wfloat.com/docs](https://wfloat.com/docs).
+> [!IMPORTANT]
+> Documentation source has moved to [wfloat/wfloat/docs](https://github.com/wfloat/wfloat/tree/main/docs). Read the docs at [wfloat.com/docs](https://wfloat.com/docs).
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
